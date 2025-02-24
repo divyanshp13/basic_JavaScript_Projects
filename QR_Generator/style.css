@@ -1,0 +1,167 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    padding:5px;
+    background-color: rgb(32, 0, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 211, 144);
+    border-radius: 15px;
+    max-width: 540px;
+    width:100%;
+    height:80vh;
+}
+
+.headWrap{
+    padding:5px;
+    font-size: large;
+    margin:10px auto 20px auto;
+    position:relative;
+    color:white;
+
+}
+.headWrap::after{
+    content:"";
+    background-color: rgb(0, 20, 74);
+    height:2px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    
+}
+.headWrap h1 span{
+    font-size: 50;
+    color: rgb(31, 0, 59);
+}
+
+.main{
+    flex:1;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height:auto;
+    /* background-color: aqua; */
+    border-radius: 15px;
+}
+
+.inputSection{
+    padding:5px;
+    margin:5px;
+    max-width: 400px;
+    width:95%;
+    /* background-color: blue; */
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:100px;
+}
+
+.inputSection p{
+    font-size: large;
+    margin: 10px;
+    padding-top: 10px;
+    color:white;
+    font-weight: bold;
+    padding:3px;
+}
+.inputSection .qrText{
+    padding:10px;
+    border-radius: 5px;
+    border:2px solid black;
+    font-size: large;
+    margin:0 10px;
+    transition: 0.3s;
+}
+.qrText:focus {
+    box-shadow: 0px 0px 10px rgba(0, 61, 49, 0.5);
+}
+
+.qrHolder{
+    border-radius: 15px;
+    max-height: 300px;
+    overflow: hidden;
+    background-color: rgb(0, 211, 144);
+}
+.qrHolder.true{
+    max-height: 100%;
+}
+.qrHolder img{
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #1e0040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+button:active {
+    transform: scale(0.98);
+}
+button:hover {
+    background-color: #3e007a;
+    transform: scale(1.05);
+}
+
+.error {
+    border-color: red !important;
+    animation: shake 0.2s ease-in-out 4;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .qrText {
+        width: 100%;
+    }
+
+    .qrHolder img {
+        width: 150px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,159 @@
+/* Global Reset */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    background-color: rgb(32, 0, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #00d390, #008f6b);
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header Styling */
+.headWrap {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.headWrap h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.headWrap h1 span {
+    color: rgb(31, 0, 59);
+}
+
+/* Input Section */
+.inputSection {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.inputSection p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.qrText {
+    padding: 12px;
+    width: 90%;
+    border-radius: 8px;
+    border: 2px solid #222;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.qrText:focus {
+    border-color: #00ffcc;
+    box-shadow: 0px 0px 10px rgba(0, 61, 49, 0.5);
+}
+
+/* QR Code Holder */
+.qrHolder {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-in-out;
+}
+
+.qrHolder.active {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #00d390;
+}
+
+.qrHolder img {
+    width: 180px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.qrHolder img:hover {
+    transform: scale(1.1);
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #1e0040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #3e007a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Error Animation */
+.error {
+    border-color: red !important;
+    animation: shake 0.2s ease-in-out 4;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .qrText {
+        width: 100%;
+    }
+
+    .qrHolder img {
+        width: 150px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
