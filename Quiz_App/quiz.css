@@ -1,0 +1,162 @@
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+    background: linear-gradient(135deg,rgb(0, 0, 0),rgb(129, 129, 129));
+    height:100vh;
+    color:white;
+    display:flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    width:90%;
+    max-width: 450px;
+    text-align: center;
+    flex-direction: column;
+    /* justify-content: left; */
+    min-height: 400px;
+    max-height:450;
+    height:fit-content;
+    padding:30px auto; 
+    border-radius: 15px;
+    color:white;
+    box-shadow: 0 5px 10px black;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid ; 
+    
+}
+.heading .logo{
+    /* margin-left: 20px; */
+    /* margin-bottom: auto; */
+    margin-top: 10px;
+    /* display:flex;
+    justify-content: space-between; */
+    /* align-items: left; */
+    text-align: left;
+    font-size: large;
+    /* font-weight: bold; */
+    padding: 15px;
+    cursor:context-menu;
+}
+ul{
+    list-style: none;
+    text-align: left;
+}
+.heading .logo span{
+    /* font-weight: bold; */
+    font-size: large;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.timerSection{
+    /* font-weight: bold; */
+    padding: 10px;
+    padding-right: 30px;
+    font-size: large;
+    /* margin:10px; */
+}
+.heading .logo span span{
+    font-size: x-large;
+    font-weight: bold;
+}
+.container .quiz{
+    /* padding:100px auto; */
+    /* border-radius: 15px; */
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    flex:1;
+    background-color: rgb(56, 56, 56);
+    margin-top: 0;
+    margin-bottom: 0;
+    height:fit-content;
+    text-align: center;
+    padding:10px;
+    align-items: center;
+}
+h3{
+    margin-top: 7% 7%;
+    cursor:context-menu;
+}
+ul{
+    margin-right: 10%;
+    /* margin-left: 10%; */
+}
+ul li{
+    background-color: rgb(255, 255, 255);
+    margin:15px;
+    padding:5px 10px;
+    border-radius: 15px;
+    border:solid rgb(255, 255, 255);
+    color:black;
+    cursor:pointer;
+}
+ul li:hover{
+    cursor:pointer;
+    border:solid black;
+    /* margin:10px; */
+    
+}
+button{
+    /* margin-top: 5%; */
+    padding:5px;
+    width:15%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    border:solid white;
+    cursor:pointer;
+}
+button:hover{
+    margin:auto;    
+    box-shadow: 2px 2px 8px black;
+    border:solid black;   
+    cursor:pointer;
+}
+ul li.true{
+    background-color: rgb(118, 255, 118);
+}
+ul li.false{
+    background-color: rgb(255, 118, 118);
+}
+.no-hover{
+    padding:5px;
+    width:15%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;  
+    border:solid black;
+    cursor:context-menu;
+}
+.no-hover:hover{
+    padding:5px;
+    width:15%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;  
+    cursor:context-menu;
+}
+.no-hover-li{
+    /* background-color: rgb(255, 255, 255); */
+    margin:15px;
+    padding:5px 10px;
+    border-radius: 15px;
+    border:solid rgb(0, 0, 0);
+    color:black;
+    cursor:context-menu;
+}
+.no-hover-li:hover{
+    /* background-color: rgb(255, 255, 255); */
+    margin:15px;
+    padding:5px 10px;
+    border-radius: 15px;
+    border:solid rgb(0, 0, 0);
+    color:black;
+    cursor:context-menu;
+}
